@@ -2,7 +2,7 @@
 
 /* Variables globales */
 // .addItems récupère le form
-const addItems = document.querySelector(".add-items");//(1)ajout d'une variable pour le form
+const addItems = document.querySelector(".add-items");
 // plateList récupère  l'ul
 const plateList = document.querySelector(".plates");
 // 1. const items = []; au départ items est un tableau vide
@@ -29,7 +29,7 @@ function handleAddItem(e) {
     //const item = document.querySelector(".name")// la valeur de l'item c'est son TEXTE
 
     const item = addItems[0].value; // (2) Vérifier si on récupère la bonne valeur, c'est à dire la valeur tapée dans l'input
-    console.log();
+    console.log(item);
 
     items.push(item); // On envoi dans notre tableau items[] les valeurs enregistrées(item) par l'utilisateur (3)
 
@@ -49,15 +49,18 @@ function handleAddItem(e) {
 
 //Injection js
 // param est tapas
-// Au départ nous n'avion pas de paramètre car nous souhaitions uniquement TESTER la fonction
-// function addItemList(param) {}
+// Au départ nous n'avions pas de paramètre car nous souhaitions uniquement TESTER la fonction
+// function addItemList(param) {
+    // return `<li>${param}</li>`;
+// }
 
     // obliger que le premier paramètre soit un tableau
     function addItemList(items = [], itemList) {
-    // return `<li>${param}</li>`;
-
+    
     // plateList.innerHTML = `<li>${param}</li>`; // l'objectif est de pouvoir écrire le code dans la liste au dessus des input
+
     // le résultat est que chaque nouvel élément s'afficher mais sur une seule ligne. Nous devons créer un li pour chaque nouvelle itération.
+
   // les items renvoyés le seront dans un tableau donc séparés par une virgule. Pour les séparer de façon différente on passera par la méthode join() en fin de cycle. Cette méthode ne prend qu'un paramètre, un séparateur repris entre guillemets. Dans ce cas-ci rien.
 
     //itemList.innerHTML = items.map(element, index);
